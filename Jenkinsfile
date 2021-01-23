@@ -3,6 +3,7 @@ pipeline {
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "dangndq/train-schedule"
+        GIT_HASH = GIT_COMMIT.take(7)
     }
     stages {
         stage('Build') {
