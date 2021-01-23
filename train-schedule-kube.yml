@@ -31,6 +31,6 @@ spec:
     spec:
       containers:
       - name: train-schedule
-        image: $DOCKER_IMAGE_NAME:$GIT_COMMIT.take(7)
+        image: $DOCKER_IMAGE_NAME:${GIT_COMMIT:0:8}
         ports:
         - containerPort: 8080
